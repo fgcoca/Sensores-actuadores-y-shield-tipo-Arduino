@@ -1,0 +1,389 @@
+<!doctype html><html lang=es class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Repositorio dedicado al tema de prueba de todo tipo de cosas relacionadas con las placas tipo Arduino fundamentalmente de Keyestudio en sus distintas versiones."><meta name=author content="Federico Coca"><link href=https://fgcoca.github.io/Sensores-actuadores-y-shield-tipo-Arduino/panel-I2C/ rel=canonical><link rel=icon href=../img/favicon.png><meta name=generator content="mkdocs-1.2.3, mkdocs-material-8.1.11"><title>Panel de sensores I2C - Sensores actuadores y shield tipo Arduino</title><link rel=stylesheet href=../assets/stylesheets/main.50e68009.min.css><link rel=stylesheet href=../assets/stylesheets/palette.e6a45f82.min.css><meta name=theme-color content=#02a6f2><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme data-md-color-primary=light-blue data-md-color-accent=deep-purple> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#panel-de-sensores-i2c-tdr-steam-y-varias-pantallas class=md-skip> Saltar a contenido </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Cabecera> <a href=.. title="Sensores actuadores y shield tipo Arduino" class="md-header__button md-logo" aria-label="Sensores actuadores y shield tipo Arduino" data-md-component=logo> <img src=../img/favicon.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Sensores actuadores y shield tipo Arduino </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Panel de sensores I2C </span> </div> </div> </div> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Búsqueda placeholder=Búsqueda autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" aria-label=Limpiar tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Inicializando búsqueda </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/fgcoca/Sensores-actuadores-y-shield-tipo-Arduino title="Ir al repositorio" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> Sensores-actuadores-y-shield-tipo-Arduino </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navegación data-md-level=0> <label class=md-nav__title for=__drawer> <a href=.. title="Sensores actuadores y shield tipo Arduino" class="md-nav__button md-logo" aria-label="Sensores actuadores y shield tipo Arduino" data-md-component=logo> <img src=../img/favicon.png alt=logo> </a> Sensores actuadores y shield tipo Arduino </label> <div class=md-nav__source> <a href=https://github.com/fgcoca/Sensores-actuadores-y-shield-tipo-Arduino title="Ir al repositorio" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> Sensores-actuadores-y-shield-tipo-Arduino </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=.. class=md-nav__link> Introducción </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2> Introducción a ArduinoBlocks <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Introducción a ArduinoBlocks" data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Introducción a ArduinoBlocks </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../crear-cuenta-gmail/ class=md-nav__link> Crear cuenta en Gmail </a> </li> <li class=md-nav__item> <a href=../crear-cuenta-AB/ class=md-nav__link> Crear cuenta en ArduinoBlocks </a> </li> <li class=md-nav__item> <a href=../primeros-AB/ class=md-nav__link> Primeros pasos con AB </a> </li> <li class=md-nav__item> <a href=../plataformaAB/ class=md-nav__link> Plataforma AB </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../turbidez/ class=md-nav__link> Sensor de turbidez </a> </li> <li class=md-nav__item> <a href=../ccs811/ class=md-nav__link> Sensor CCS811 de eCO2, TVOC y temperatura </a> </li> <li class=md-nav__item> <a href=../ESP01/ class=md-nav__link> Modulo ESP8266 ESP 01, shield de programación y dirección MAC </a> </li> <li class=md-nav__item> <a href=../panel-easy-plug/ class=md-nav__link> Panel de sensores Easy Plug </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Panel de sensores I2C <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Panel de sensores I2C </a> <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Tabla de contenidos </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#panel-de-sensores-i2c class=md-nav__link> Panel de sensores I2C </a> <nav class=md-nav aria-label="Panel de sensores I2C"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ks0392-keyestudio-hub-i2c class=md-nav__link> KS0392. Keyestudio Hub I2C </a> </li> <li class=md-nav__item> <a href=#ks0031-sensor-tactil-capacitivo class=md-nav__link> Ks0031. Sensor táctil capacitivo </a> </li> <li class=md-nav__item> <a href=#ks0396-matriz-de-led-8x8-i2c-direccionable class=md-nav__link> KS0396. Matriz de LED 8x8 I2C direccionable </a> </li> <li class=md-nav__item> <a href=#ks0061-pantalla-lcd-1602-i2c class=md-nav__link> Ks0061. Pantalla LCD 1602 I2C </a> </li> <li class=md-nav__item> <a href=#ks0098-sensor-de-luz-ambiente-temt6000 class=md-nav__link> Ks0098. Sensor de luz ambiente TEMT6000 </a> </li> <li class=md-nav__item> <a href=#ks0430-sensor-de-temperatura-y-humedad class=md-nav__link> KS0430. Sensor de temperatura y humedad </a> </li> <li class=md-nav__item> <a href=#ks0271-pantalla-oled-de-096 class=md-nav__link> Ks0271. Pantalla OLED de 0.96" </a> </li> <li class=md-nav__item> <a href=#ks0012-acelerometro-de-tres-ejes-adxl345 class=md-nav__link> Ks0012. Acelerómetro de tres ejes ADXL345" </a> </li> <li class=md-nav__item> <a href=#ks0457-sensor-de-eco2-y-tvoc-ccs811 class=md-nav__link> KS0457. Sensor de eCO2 y TVOC CCS811 </a> </li> <li class=md-nav__item> <a href=#ks0457-sensor-de-color-rgb-tcs34725 class=md-nav__link> KS0457. Sensor de color RGB TCS34725 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#programacion-del-panel-de-sensores-i2c class=md-nav__link> Programación del panel de sensores I2C </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_8 type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8> Miscelanea <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Miscelanea data-md-level=1> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Miscelanea </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../Miscelanea/about/ class=md-nav__link> Autor </a> </li> <li class=md-nav__item> <a href=../Miscelanea/lic/ class=md-nav__link> Licencias </a> </li> <li class=md-nav__item> <a href=../Miscelanea/webgrafia/ class=md-nav__link> Webgrafia/Bibliografía </a> </li> <li class=md-nav__item> <a href=../Miscelanea/soft/ class=md-nav__link> Software utilizado </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Tabla de contenidos </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#panel-de-sensores-i2c class=md-nav__link> Panel de sensores I2C </a> <nav class=md-nav aria-label="Panel de sensores I2C"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ks0392-keyestudio-hub-i2c class=md-nav__link> KS0392. Keyestudio Hub I2C </a> </li> <li class=md-nav__item> <a href=#ks0031-sensor-tactil-capacitivo class=md-nav__link> Ks0031. Sensor táctil capacitivo </a> </li> <li class=md-nav__item> <a href=#ks0396-matriz-de-led-8x8-i2c-direccionable class=md-nav__link> KS0396. Matriz de LED 8x8 I2C direccionable </a> </li> <li class=md-nav__item> <a href=#ks0061-pantalla-lcd-1602-i2c class=md-nav__link> Ks0061. Pantalla LCD 1602 I2C </a> </li> <li class=md-nav__item> <a href=#ks0098-sensor-de-luz-ambiente-temt6000 class=md-nav__link> Ks0098. Sensor de luz ambiente TEMT6000 </a> </li> <li class=md-nav__item> <a href=#ks0430-sensor-de-temperatura-y-humedad class=md-nav__link> KS0430. Sensor de temperatura y humedad </a> </li> <li class=md-nav__item> <a href=#ks0271-pantalla-oled-de-096 class=md-nav__link> Ks0271. Pantalla OLED de 0.96" </a> </li> <li class=md-nav__item> <a href=#ks0012-acelerometro-de-tres-ejes-adxl345 class=md-nav__link> Ks0012. Acelerómetro de tres ejes ADXL345" </a> </li> <li class=md-nav__item> <a href=#ks0457-sensor-de-eco2-y-tvoc-ccs811 class=md-nav__link> KS0457. Sensor de eCO2 y TVOC CCS811 </a> </li> <li class=md-nav__item> <a href=#ks0457-sensor-de-color-rgb-tcs34725 class=md-nav__link> KS0457. Sensor de color RGB TCS34725 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#programacion-del-panel-de-sensores-i2c class=md-nav__link> Programación del panel de sensores I2C </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=panel-de-sensores-i2c-tdr-steam-y-varias-pantallas><font color=#8B008B>Panel de sensores I2C, TdR STEAM y varias pantallas</font><a class=headerlink href=#panel-de-sensores-i2c-tdr-steam-y-varias-pantallas title="Permanent link">&para;</a></h1> <p>Este panel está constituido por una placa tipo UNO, la shield IMAGINA TdR STEAM y los sensores y actuadores que iremos mencionando. En la imagen siguiente vemos el aspecto de ambas placas.</p> <p><center></p> <table> <thead> <tr> <th align=center>Placa tipo UNO de keyestudio</th> <th align=center>Placa TdR STEAM</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Placa tipo UNO de keyestudio" src=../img/panelI2C/UNO.png></td> <td align=center><img alt="Placa TdR STEAM" src=../img/panelI2C/TdR.jpeg></td> </tr> </tbody> </table> <p></center></p> <p>Toda la información que necesitemos de la placa TdR STEAM la vamos a encontrar en la página <a href=https://fgcoca.github.io/TdR-STEAM-and_UNO/ >Retos con TdR-STEAM y Keyestudio UNO</a>.</p> <h2 id=panel-de-sensores-i2c><font color=#007575>Panel de sensores I2C</font><a class=headerlink href=#panel-de-sensores-i2c title="Permanent link">&para;</a></h2> <h3 id=ks0392-keyestudio-hub-i2c><font color=#AA0000>KS0392. Keyestudio Hub I2C</font><a class=headerlink href=#ks0392-keyestudio-hub-i2c title="Permanent link">&para;</a></h3> <p>Para la expansión del conector I2C que integra la placa TdR STEAM utilizamos la shield de conversión I2C que vemos en la imagen siguiente.</p> <p><center></p> <table> <thead> <tr> <th align=center>Hub I2C</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Hub I2C" src=../img/panelI2C/Hub.png></td> </tr> </tbody> </table> <p></center></p> <p>El conexionado entre la placa TdR STEAM y la shield tenemos que hacer con un un cable formado por cuatro conductores que en un extremo lleva un conector JST Macho de 4 pines (TdR) y en el otro un conector plano hembra también de 4 pines. El conector JST solamente puede colocarse en una posición y por lo tanto no hay posibilidad de error. Para colocar el conector plano nos fijamos en el nombre de uno de sus extremos en la shield y lo hacemos coincidir con el cable que corresponda en el conector JST, lo colocamos en su sitio y tenemos resuelta la conexión. Este mismo procedimiento lo llevaremos a cabo de forma similar con el resto de sensores y actuadores por lo que simplemente describimos los elementos usados en el panel.</p> <h3 id=ks0031-sensor-tactil-capacitivo><font color=#AA0000>Ks0031. Sensor táctil capacitivo</font><a class=headerlink href=#ks0031-sensor-tactil-capacitivo title="Permanent link">&para;</a></h3> <p>Este sensor puede "sentir" el tacto de las personas incluso aislado por alguna tela y papel. Su sensibilidad disminuye a medida que la capa de aislamiento se hace más gruesa. Su aspecto y el diagrama típico de conexión lo vemos en la imagen siguiente.</p> <p><center></p> <table> <thead> <tr> <th align=center>Sensor táctil capacitivo</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Sensor táctil capacitivo" src=../img/panelI2C/boton.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-boton.png></td> </tr> </tbody> </table> <p></center></p> <p>El botón táctil va conectado al conector D5 de la placa TdR STEAM a través de un cable de 3 hilos apropiado. </p> <p>Indicar que este sensor no es I2C sino digital.</p> <h3 id=ks0396-matriz-de-led-8x8-i2c-direccionable><font color=#AA0000>KS0396. Matriz de LED 8x8 I2C direccionable</font><a class=headerlink href=#ks0396-matriz-de-led-8x8-i2c-direccionable title="Permanent link">&para;</a></h3> <p>En la programación se va a establecer que el botón táctil sirva para cambiar de carita triste a carita sonriente la matriz de 8x8 LEDs al tiempo que emite un pitido el zumbador de la TdR STEAM.</p> <p>Esta matriz utiliza el chip HT16K33 para controlar los 8x8 puntos o LEDs. Dispone de tres interruptores DIP con los que podemos configurar la dirección de comunicación I2C. Sus especificaciones técnicas son:</p> <ul> <li>Interfaz: 4Pin header</li> <li>Voltaje de funcionamiento: DC 4.5V-5.5V</li> <li>Dirección física: configurable</li> </ul> <p><center></p> <table> <thead> <tr> <th align=center>Matriz de LED 8x8 I2C direccionable</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Matriz de LED 8x8 I2C direccionable" src=../img/panelI2C/8x8.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-8x8.png></td> </tr> </tbody> </table> <p></center></p> <p>En la tabla siguiente vemos como configurar los interruptores DIP para obtener las diferentes direcciones físicas disponibles.</p> <p><center></p> <table> <thead> <tr> <th align=center>3</th> <th align=center>2</th> <th align=center>1</th> <th align=center>Dirección Hexadecimal</th> </tr> </thead> <tbody> <tr> <td align=center>0</td> <td align=center>0</td> <td align=center>0</td> <td align=center>0x70</td> </tr> <tr> <td align=center>0</td> <td align=center>0</td> <td align=center>1</td> <td align=center>0x71</td> </tr> <tr> <td align=center>0</td> <td align=center>1</td> <td align=center>0</td> <td align=center>0x72</td> </tr> <tr> <td align=center>0</td> <td align=center>1</td> <td align=center>1</td> <td align=center>0x73</td> </tr> <tr> <td align=center>1</td> <td align=center>0</td> <td align=center>0</td> <td align=center>0x74</td> </tr> <tr> <td align=center>1</td> <td align=center>0</td> <td align=center>1</td> <td align=center>0x75</td> </tr> <tr> <td align=center>1</td> <td align=center>1</td> <td align=center>0</td> <td align=center>0x76</td> </tr> <tr> <td align=center>1</td> <td align=center>1</td> <td align=center>1</td> <td align=center>0x77</td> </tr> </tbody> </table> <p></center></p> <h3 id=ks0061-pantalla-lcd-1602-i2c><font color=#AA0000>Ks0061. Pantalla LCD 1602 I2C</font><a class=headerlink href=#ks0061-pantalla-lcd-1602-i2c title="Permanent link">&para;</a></h3> <p>Pantalla LCD de 16 caracteres en 2 líneas con fondo azul y retroiluminación de luz blanca. La LCD original 1602 necesita 7 puertos IO para estar en funcionamiento, en cambio esta, al ser I2C, permite ahorrar 5 puertos. Especificaciones:</p> <ul> <li>I2C Dirección: 0x27. Modificable por hardware.</li> <li>Retroiluminado (Azul con color blanco).</li> <li>Tensión de alimentación: 5V.</li> <li>Interfaz: I2C.</li> <li>Contraste ajustable</li> </ul> <p><center></p> <table> <thead> <tr> <th align=center>Pantalla LCD 1602 I2C</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Pantalla LCD 1602 I2C" src=../img/panelI2C/1602.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-1602.png></td> </tr> </tbody> </table> <p></center></p> <p>En el panel vamos a disponer de dos pantallas, para visualizar diferentes datos. En la primera de ellas cuando accionamos el pulsador SW1 en la TdR STEAM veremos la temperatura y humedad tanto del sensor DHT22 externo como del DHT11 de la placa. Si accionamos el pulsador SW2 veremos los datos de luminosidad capturados por la LDR de la placa y los del sensor de luz ambiental. La otra LCD se va a dedicar a mostrar los datos capturados por el sensor de eCO2 CCS811.</p> <p>Para poder trabajar con dos pantallas de este tipo necesitamos cambiar la dirección física de una de ellas. En el enlace <a href=https://fgcoca.github.io/TdR-STEAM-and_UNO/R11/#cambiar-la-direccion-fisica-del-dispositivo-i2c>cambiar la dirección física...</a> tenemos descrito este tema.</p> <h3 id=ks0098-sensor-de-luz-ambiente-temt6000><font color=#AA0000>Ks0098. Sensor de luz ambiente TEMT6000</font><a class=headerlink href=#ks0098-sensor-de-luz-ambiente-temt6000 title="Permanent link">&para;</a></h3> <p>Adaptado a la sensibilidad del ojo humano</p> <p><center></p> <table> <thead> <tr> <th align=center>Sensor de luz ambiente</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Sensor de luz ambiente" src=../img/panelI2C/TEMT6000.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-TEMP6000.png></td> </tr> </tbody> </table> <p></center></p> <p>Este sensor no es I2C sino analógico.</p> <h3 id=ks0430-sensor-de-temperatura-y-humedad><font color=#AA0000>KS0430. Sensor de temperatura y humedad</font><a class=headerlink href=#ks0430-sensor-de-temperatura-y-humedad title="Permanent link">&para;</a></h3> <p>Sensor que combina en una señal digital la medida de temperatura y humedad. Sus especificaciones técnicas son:</p> <ul> <li>Voltaje de funcionamiento: DC 3.3V-5V</li> <li>Señal de salida: digital de bus único</li> <li>Rango de medición de humedad: 0 a 100%</li> <li>Precisión de medición de humedad: ± 2%</li> <li>Rango de medición de temperatura: -40 °C a 80 °C</li> <li>Precisión de medición de temperatura: ± 0.5 °C</li> </ul> <p>En la imagen siguiente vemos su aspecto y conexionado típico.</p> <p><center></p> <table> <thead> <tr> <th align=center>Sensor de temperatura y humedad</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Sensor de temperatura y humedad" src=../img/panelI2C/DHT22.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-DHT22.png></td> </tr> </tbody> </table> <p></center></p> <p>Este sensor no es I2C sino digital.</p> <h3 id=ks0271-pantalla-oled-de-096><font color=#AA0000>Ks0271. Pantalla OLED de 0.96"</font><a class=headerlink href=#ks0271-pantalla-oled-de-096 title="Permanent link">&para;</a></h3> <p>Las siglas OLED (Organic Light Emitting Diode) pueden traducirse como Diodo Orgánico Emisor de Luz. A nivel microscópico, una pantalla OLED es una matriz de LED orgánicos que se encienden cuando emiten energía.</p> <ul> <li>Voltaje de funcionamiento: DC 3.3V-5V</li> <li>Número de píxeles: 128 × 64</li> <li>Profundidad de color: azul</li> <li>Forma de comunicación: I2C</li> </ul> <p>En la imagen siguiente vemos su aspecto y conexionado típico.</p> <p><center></p> <table> <thead> <tr> <th align=center>Pantalla OLED de 0.96"</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt='Pantalla OLED de 0.96"' src=../img/panelI2C/OLED.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-OLED.png></td> </tr> </tbody> </table> <p></center></p> <p>Utilizaremos la pantalla OLED para mostrar los ángulos de rotación ortogonales en los ejes X e Y.</p> <h3 id=ks0012-acelerometro-de-tres-ejes-adxl345><font color=#AA0000>Ks0012. Acelerómetro de tres ejes ADXL345"</font><a class=headerlink href=#ks0012-acelerometro-de-tres-ejes-adxl345 title="Permanent link">&para;</a></h3> <p>El ADXL345 es un acelerómetro capacitivo (MEMS) de 3 ejes de baja potencia con medición de alta resolución (13 bits) de hasta &plusmn;16g. Los datos de salida digital están formateados con 16 bits y se puede acceder a través de una interfaz digital SPI (3 o 4 hilos) o I2C.</p> <p>El ADXL345 es adecuado para medir la aceleración estática de la gravedad en aplicaciones de detección de inclinación, así como la aceleración dinámica resultante del movimiento o el impacto. Su alta resolución (4mg/LSB) permite la medición de cambios de inclinación menores a 1.0 grado.</p> <p><center></p> <table> <thead> <tr> <th align=center>Acelerómetro de tres ejes ADXL345</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Acelerómetro de tres ejes ADXL345" src=../img/panelI2C/acelerometro.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-acelerometro.png></td> </tr> </tbody> </table> <p></center></p> <p>En estos sensores miden la rotación del eje X (Roll), la rotación del eje Y (Pitch) y la rotación del eje Z (Yaw). Para saber mas sobre el tema se aconseja visitar la entrada <a href=https://www.luisllamas.es/medir-la-inclinacion-imu-arduino-filtro-complementario/ >medir la inclinación con IMU</a> disponible en el blog de Luis Llamas.</p> <h3 id=ks0457-sensor-de-eco2-y-tvoc-ccs811><font color=#AA0000>KS0457. Sensor de eCO2 y TVOC CCS811</font><a class=headerlink href=#ks0457-sensor-de-eco2-y-tvoc-ccs811 title="Permanent link">&para;</a></h3> <p>El sensor de gas CCS811B puede detectar una amplia gama de Compuestos Orgánicos Volátiles (VOCs) y está diseñado para el monitoreo de la calidad del aire. Cuando se conecta a la placa de control devolverá una lectura de Compuesto Orgánico Volátil Total (TVOC) y una lectura de Dióxido de Carbono Equivalente (eCO2). Sus especificaciones técnicas son:</p> <ul> <li>Voltaje de trabajo: DC 5V</li> <li>Corriente de trabajo: 30mA</li> <li>Potencia máxima: 46 mW</li> <li>Rango de medición de eCO2: 400-8192 ppm</li> <li>Rango de medición de TVOC: 0 a 1187 ppb</li> <li>Temperatura de trabajo: -25 a + 65 °C</li> </ul> <p>Para aprender mas sobre este sensor no dejes de visitar el enlace <a href=https://clubroboticagranada.github.io/semaforo-optico-acustico-CO2/ >Semáforo óptico-acústico de CO2</a> especialmente en su entrada <a href=https://clubroboticagranada.github.io/semaforo-optico-acustico-CO2/modular/comparativa/ >Comparativa eCO2 versus CO2</a></p> <p><center></p> <table> <thead> <tr> <th align=center>Sensor de eCO2 y TVOC CCS811</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Sensor de eCO2 y TVOC CCS811" src=../img/panelI2C/CCS811.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-CCS811.png></td> </tr> </tbody> </table> <p></center></p> <h3 id=ks0457-sensor-de-color-rgb-tcs34725><font color=#AA0000>KS0457. Sensor de color RGB TCS34725</font><a class=headerlink href=#ks0457-sensor-de-color-rgb-tcs34725 title="Permanent link">&para;</a></h3> <p>El sensor puede reconocer el color de la superficie de un objeto a través de la detección óptica. El sensor se ilumina con luz brillante y emite los valores RGB correspondientes. Además, para evitar la interferencia del entorno y aumentar la precisión, dispone de una placa protectora de luz infrarroja en la parte inferior del sensor, de modo que el elemento de espectro infrarrojo de la luz incidente se minimiza para hacer que la gestión del color sea más precisa. En la parte inferior del sensor, se pueden ver 4 LEDs que garantizan que el sensor se pueda usar normalmente en condiciones de poca luz ambiental. Estas son sus especificaciones técnicas:</p> <ul> <li>Voltaje de funcionamiento: 3.3-5V</li> <li>Corriente de funcionamiento: 65uA</li> <li>Distancia medida: 3-10mm</li> <li>Frecuencia de reloj: 0-400KHZ</li> <li>Interfaz: I2C y paso de pin de 2,54 mm</li> <li>Rango de temperatura: -30 °C ~ + 70</li> </ul> <p>En el panel se han dispuesto tres zonas de colores rojo, verde y azul que harán que cuando acerquemos el sensor a alguna de ellas el LED RGB en la TdR STEAM se ilumine en ese color permanecienco apagado si no detecta ninguno de los tres colores.</p> <p><center></p> <table> <thead> <tr> <th align=center>Sensor de color RGB TCS34725</th> <th align=center>Diagrama de conexión típico</th> </tr> </thead> <tbody> <tr> <td align=center><img alt="Sensor de color RGB TCS34725" src=../img/panelI2C/color.png></td> <td align=center><img alt="Diagrama de conexión típico" src=../img/panelI2C/conex-color.png></td> </tr> </tbody> </table> <p></center></p> <h2 id=programacion-del-panel-de-sensores-i2c><font color=#007575>Programación del panel de sensores I2C</font><a class=headerlink href=#programacion-del-panel-de-sensores-i2c title="Permanent link">&para;</a></h2> <p>El proyecto está como público en el siguiente enlace: <a href=https://fgcoca.github.io/Sensores-actuadores-y-shield-tipo-Arduino/ >acceder</a>.</p> <p>También lo tenemos disponible para descargar e importar en este <a href=../firmware/panel-I2C.abp>enlace</a>.</p> <p>El siguiente código corresponde al programa elaborado en ArduinoBlocks.</p> <hr> <div class=highlight><pre><span></span><code>#include &lt;SPI.h&gt;
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_LEDBackpack.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+#include &quot;ABlocks_LiquidCrystal_I2C.h&quot;
+#include &lt;ABLocks_TimerFreeTone.h&gt;
+#include &quot;ADXL345.h&quot;
+
+#include &quot;ABlocks_DHT.h&quot;
+#include &quot;ABlocks_DHT.h&quot;
+#include &lt;Adafruit_CCS811.h&gt;
+#include &quot;Adafruit_TCS34725.h&quot;
+
+#include &quot;ColorConverterLib.h&quot;
+
+double espera_con_bloqueo;
+double X;
+double Y;
+double TDHT11;
+double HDHT11;
+double TDHT22;
+double LDR;
+double CO2;
+double HDHT22;
+double VOC;
+double sen_luz_ambiente;
+boolean b_boton_tactil;
+boolean b_pulsador_2;
+boolean b_pulsador_1;
+Adafruit_8x8matrix ledmatrix_1 =Adafruit_8x8matrix();
+Adafruit_SSD1306 oled_1(128,64, &amp;Wire,-1);
+LiquidCrystal_I2C lcd_1(0x27,16,2);
+LiquidCrystal_I2C lcd_2(0x26,16,2);
+static const uint8_t PROGMEM ledmatrix_data_sprite_face_happy[] PROGMEM = {B00000000,B01100110,B01100110,B00000000,B00000000,B11000011,B01100110,B00111100};
+static const uint8_t PROGMEM ledmatrix_data_sprite_face_sad[] PROGMEM = {B00000000,B01100110,B00100100,B00000000,B00111100,B01100110,B11000011,B10000001};
+byte lcd_1_customchar_0[8]={B00100,B01010,B01010,B00100,B00000,B00000,B00000,B00000};
+
+unsigned long task_time_ms=0;
+
+ADXL345 adxl345_accel;
+DHT dht4(4,DHT11);
+DHT dht3(3,DHT22);
+Adafruit_CCS811 sensor_ccs811;
+unsigned long sensor_ccs811_lastread=0;
+double sensor_ccs811_co2_ppm=0.0;
+double sensor_ccs811_co2_mgm3=0.0;
+double sensor_ccs811_co2_tvoc_ppb=0.0;
+Adafruit_TCS34725 tcs34725 = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_1X);
+double  tcs34725_r=0;
+double  tcs34725_g=0;
+double  tcs34725_b=0;
+uint16_t  tcs34725_clear=0;
+double  tcs34725_h=0;
+double  tcs34725_s=0;
+double  tcs34725_v=0;
+
+void boton_tactil_matriz_8x8() {
+    if (b_boton_tactil) {
+        ledmatrix_1.setRotation(3);
+        ledmatrix_1.clear();
+        ledmatrix_1.drawBitmap(0,0,ledmatrix_data_sprite_face_happy,8,8,LED_ON);
+        ledmatrix_1.writeDisplay();
+        TimerFreeTone(8,523.26,200);
+        delay(espera_con_bloqueo);
+        TimerFreeTone(8,659.26,200);
+        delay(espera_con_bloqueo);
+    }
+    else {
+        ledmatrix_1.setRotation(3);
+        ledmatrix_1.clear();
+        ledmatrix_1.drawBitmap(0,0,ledmatrix_data_sprite_face_sad,8,8,LED_ON);
+        ledmatrix_1.writeDisplay();
+    }
+
+}
+void DHTs() {
+    lcd_1.createChar(0, lcd_1_customchar_0);
+    if (b_pulsador_1) {
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print(String(&quot;11:T=&quot;));
+        lcd_1.setCursor(5, 0);
+        lcd_1.print((unsigned long)(TDHT11));
+        lcd_1.setCursor(7, 0);
+        lcd_1.write((byte)0);
+        lcd_1.setCursor(8, 0);
+        lcd_1.print(String(&quot;C&quot;));
+        lcd_1.setCursor(9, 0);
+        lcd_1.print(String(&quot;-&quot;));
+        lcd_1.setCursor(10, 0);
+        lcd_1.print(String(&quot;H=&quot;));
+        lcd_1.setCursor(12, 0);
+        lcd_1.print((unsigned long)(HDHT11));
+        lcd_1.setCursor(14, 0);
+        lcd_1.print(String(&quot;%&quot;));
+        lcd_1.setCursor(0, 1);
+        lcd_1.print(String(&quot;22:T=&quot;));
+        lcd_1.setCursor(5, 1);
+        lcd_1.print((unsigned long)(TDHT22));
+        lcd_1.setCursor(7, 1);
+        lcd_1.write((byte)0);
+        lcd_1.setCursor(8, 1);
+        lcd_1.print(String(&quot;C&quot;));
+        lcd_1.setCursor(9, 1);
+        lcd_1.print(String(&quot;-&quot;));
+        lcd_1.setCursor(10, 1);
+        lcd_1.print(String(&quot;H=&quot;));
+        lcd_1.setCursor(12, 1);
+        lcd_1.print((unsigned long)(HDHT22));
+        lcd_1.setCursor(14, 1);
+        lcd_1.print(String(&quot;%&quot;));
+        delay(1000);
+    }
+    else {
+        lcd_1.clear();
+    }
+
+}
+void OLED_acelerometro() {
+    if((millis()-task_time_ms)&gt;=2000){
+        task_time_ms=millis();
+        oled_1.clearDisplay();
+        oled_1.display();
+        oled_1.setTextSize(3);
+        oled_1.setTextColor(WHITE);
+        oled_1.setCursor(0,10);
+        oled_1.print(String(&quot;X: &quot;));
+        oled_1.display();
+        oled_1.setTextSize(3);
+        oled_1.setTextColor(WHITE);
+        oled_1.setCursor(35,10);
+        oled_1.print(X);
+        oled_1.display();
+        oled_1.setTextSize(3);
+        oled_1.setTextColor(WHITE);
+        oled_1.setCursor(0,40);
+        oled_1.print(String(&quot;Y: &quot;));
+        oled_1.display();
+        oled_1.setTextSize(3);
+        oled_1.setTextColor(WHITE);
+        oled_1.setCursor(35,40);
+        oled_1.print(Y);
+        oled_1.display();
+    }
+}
+double fnc_adxl345(int _type)
+{
+    double v=0.0;
+    if(_type&gt;=1 &amp;&amp; _type&lt;=3){
+        //raw data
+        Vector data_raw = adxl345_accel.readRaw();
+        if(_type==1)v=data_raw.XAxis;
+        if(_type==2)v=data_raw.YAxis;
+        if(_type==3)v=data_raw.ZAxis;
+    }
+    else{
+        //noramlized data g=gravity
+        Vector data_norm = adxl345_accel.readNormalize();
+        if(_type&gt;=4 &amp;&amp; _type&lt;=6){
+            if(_type==4)v=data_norm.XAxis;
+            if(_type==5)v=data_norm.YAxis;
+            if(_type==6)v=data_norm.ZAxis;
+        }
+        else{
+            //pitch,roll degrees
+            Vector data_filtered = adxl345_accel.lowPassFilter(data_norm, 0.5);
+            if(_type==7)v=(atan2(data_filtered.YAxis, data_filtered.ZAxis)*180.0)/M_PI;
+            if(_type==8)v=-(atan2(data_filtered.XAxis, sqrt(data_filtered.YAxis*data_filtered.YAxis + data_filtered.ZAxis*data_filtered.ZAxis))*180.0)/M_PI;
+        }
+    }
+    return v;
+}
+
+double fnc_ccs811_data(int _type)
+{
+    double v=0.0;
+    if((millis()-sensor_ccs811_lastread)&gt;=1000){
+        if(sensor_ccs811.available() &amp;&amp; (!sensor_ccs811.readData()) ){
+            //update new values from sensor
+            sensor_ccs811_co2_ppm=((double)sensor_ccs811.geteCO2());
+            sensor_ccs811_co2_mgm3=((double)sensor_ccs811_co2_ppm*(double)1.8);
+            sensor_ccs811_co2_tvoc_ppb=((double)sensor_ccs811.getTVOC());
+            sensor_ccs811_lastread=millis();
+        }
+        else{
+            //error reading sensor, reset values...
+            sensor_ccs811_co2_ppm=0.0;
+            sensor_ccs811_co2_mgm3=0.0;
+            sensor_ccs811_co2_tvoc_ppb=0.0;
+        }
+    }
+    //return value
+    if(_type==0)v=sensor_ccs811_co2_ppm;
+    if(_type==1)v=sensor_ccs811_co2_tvoc_ppb;
+    if(_type==2)v=sensor_ccs811_co2_mgm3;
+
+    return v;
+}
+
+void sensores() {
+    b_boton_tactil = digitalRead(5);
+    X = fnc_adxl345(7);
+    Y = fnc_adxl345(8);
+    TDHT11 = (unsigned long)(dht4.readTemperature());
+    HDHT11 = (unsigned long)(dht4.readHumidity());
+    TDHT22 = (unsigned long)(dht3.readTemperature());
+    HDHT22 = (unsigned long)(dht3.readHumidity());
+    b_pulsador_1 = digitalRead(2);
+    b_pulsador_2 = digitalRead(7);
+    sen_luz_ambiente = map(analogRead(A3),0,1023,0,100);
+    LDR = map(analogRead(A1),0,1023,0,100);
+    CO2 = fnc_ccs811_data(2);
+    VOC = fnc_ccs811_data(1);
+}
+void fnc_tcs34725_capturecolor()
+{
+    uint16_t tcs_red, tcs_green, tcs_blue;
+    tcs34725.getRawData(&amp;tcs_red, &amp;tcs_green, &amp;tcs_blue, &amp;tcs34725_clear);
+    if (tcs34725_clear == 0) {
+        tcs34725_r=tcs34725_g=tcs34725_b=0;
+        return;
+    }
+    tcs34725_r = ((float)tcs_red / (float)tcs34725_clear * 255.0);
+    tcs34725_g = ((float)tcs_green / (float)tcs34725_clear * 255.0);
+    tcs34725_b = ((float)tcs_blue / (float)tcs34725_clear * 255.0);
+    ColorConverter::RgbToHsv(static_cast&lt;uint8_t&gt;(tcs34725_r), static_cast&lt;uint8_t&gt;(tcs34725_g), static_cast&lt;uint8_t&gt;(tcs34725_b), tcs34725_h, tcs34725_s,tcs34725_v);
+    tcs34725_h=tcs34725_h*360;
+    tcs34725_s=tcs34725_s*100;
+    tcs34725_v=tcs34725_v*100;
+}
+
+bool fnc_tcs34725_iscolor(int _color)
+{
+    if(tcs34725_h &gt; 340 || tcs34725_h &lt; 20){ if(_color==2) return true; } //red
+    else if(tcs34725_h &lt; 45){ if(_color==3) return true; }  //orange
+    else if(tcs34725_h &lt; 70){ if(_color==4) return true; }  //yellow
+    else if(tcs34725_h &lt; 150){ if(_color==5) return true; } //green
+    else if(tcs34725_h &lt; 210){ if(_color==6) return true; } //cyan
+    else if(tcs34725_h &lt; 265){ if(_color==7) return true; } //blue
+    else if(tcs34725_h &lt; 340){ if(_color==8) return true; } //violet
+    return false;
+}
+
+void sensor_color_RGB() {
+    fnc_tcs34725_capturecolor();
+    if (fnc_tcs34725_iscolor(2)) {
+        analogWrite(6,255);
+        analogWrite(9,0);
+        analogWrite(10,0);
+    }
+    else if (fnc_tcs34725_iscolor(5)) {
+        analogWrite(6,0);
+        analogWrite(9,255);
+        analogWrite(10,0);
+    }
+    else if (fnc_tcs34725_iscolor(7)) {
+        analogWrite(6,0);
+        analogWrite(9,0);
+        analogWrite(10,255);
+    }
+    else {
+        analogWrite(9,0);
+        analogWrite(10,0);
+        analogWrite(11,0);
+    }
+
+}
+void luminosidad() {
+    if (b_pulsador_2) {
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print(String(&quot;Luz LDR: &quot;));
+        lcd_1.setCursor(9, 0);
+        lcd_1.print((unsigned long)(LDR));
+        lcd_1.setCursor(13, 0);
+        lcd_1.print(String(&quot;%&quot;));
+        lcd_1.setCursor(0, 1);
+        lcd_1.print(String(&quot;Luz TEMT: &quot;));
+        lcd_1.setCursor(10, 1);
+        lcd_1.print((unsigned long)(sen_luz_ambiente));
+        lcd_1.setCursor(13, 1);
+        lcd_1.print(String(&quot;%&quot;));
+        delay(1000);
+    }
+    else {
+        lcd_1.clear();
+    }
+
+}
+void CO2_VOC() {
+    lcd_2.clear();
+    lcd_2.setCursor(0, 0);
+    lcd_2.print(String(&quot;CO2:&quot;));
+    lcd_2.setCursor(0, 1);
+    lcd_2.print(String(&quot;VOC:&quot;));
+    lcd_2.setCursor(5, 0);
+    lcd_2.print((unsigned long)(CO2));
+    lcd_2.setCursor(10, 0);
+    lcd_2.print(String(&quot;mg/m3&quot;));
+    lcd_2.setCursor(5, 1);
+    lcd_2.print((unsigned long)(VOC));
+    lcd_2.setCursor(10, 1);
+    lcd_2.print(String(&quot;ppb&quot;));
+    delay(1000);
+}
+void variables() {
+    espera_con_bloqueo = 100;
+    X = 0;
+    Y = 0;
+    TDHT11 = 0;
+    HDHT11 = 0;
+    TDHT22 = 0;
+    HDHT22 = 0;
+    sen_luz_ambiente = 0;
+    LDR = 0;
+    CO2 = 0;
+    VOC = 0;
+}
+
+void setup()
+{
+    pinMode(8, OUTPUT);
+    pinMode(5, INPUT);
+    pinMode(4, INPUT);
+    pinMode(3, INPUT);
+    pinMode(2, INPUT);
+    pinMode(7, INPUT);
+    pinMode(A3, INPUT);
+    pinMode(A1, INPUT);
+    pinMode(6, OUTPUT);
+    pinMode(9, OUTPUT);
+    pinMode(10, OUTPUT);
+    pinMode(11, OUTPUT);
+    adxl345_accel.begin(); adxl345_accel.setRange(ADXL345_RANGE_16G);
+    dht4.begin();
+    dht3.begin();
+    sensor_ccs811.begin();
+
+    tcs34725.begin();
+    ledmatrix_1.begin(0x70);
+    ledmatrix_1.setType(0);
+    ledmatrix_1.setTextWrap(false);
+    ledmatrix_1.setTextSize(1);
+    ledmatrix_1.clear();
+    ledmatrix_1.writeDisplay();
+    oled_1.begin(SSD1306_SWITCHCAPVCC,0x3C);
+    oled_1.clearDisplay();
+    oled_1.display();
+    oled_1.setTextSize(2);
+    oled_1.setTextColor(WHITE);
+    oled_1.setCursor(35,15);
+    oled_1.print(String(&quot;OLED&quot;));
+    oled_1.display();
+    oled_1.setTextSize(2);
+    oled_1.setTextColor(WHITE);
+    oled_1.setCursor(10,35);
+    oled_1.print(String(&quot;iniciada&quot;));
+    oled_1.display();
+    lcd_1.begin();
+    lcd_1.noCursor();
+    lcd_1.backlight();
+    lcd_1.clear();
+    lcd_1.setCursor(1, 0);
+    lcd_1.print(String(&quot;LCD 1 iniciada&quot;));
+    lcd_2.begin();
+    lcd_2.noCursor();
+    lcd_2.backlight();
+    lcd_2.clear();
+    lcd_2.setCursor(1, 0);
+    lcd_2.print(String(&quot;LCD 2 iniciada&quot;));
+    variables();
+
+}
+
+
+void loop()
+{
+
+    sensores();
+    boton_tactil_matriz_8x8();
+    OLED_acelerometro();
+    sensor_color_RGB();
+    DHTs();
+    luminosidad();
+    CO2_VOC();
+
+}
+</code></pre></div> <hr> </article> </div> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Pie> <a href=../panel-easy-plug/ class="md-footer__link md-footer__link--prev" aria-label="Anterior: Panel de sensores Easy Plug" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Anterior </span> Panel de sensores Easy Plug </div> </div> </a> <a href=../Miscelanea/about/ class="md-footer__link md-footer__link--next" aria-label="Siguiente: Autor" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Siguiente </span> Autor </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2022 - 2032 Federico Coca </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script> <script src=../assets/javascripts/bundle.5a9542cf.min.js></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script> </body> </html>
