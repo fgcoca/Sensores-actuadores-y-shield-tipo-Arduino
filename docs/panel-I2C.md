@@ -207,7 +207,7 @@ En el panel se han dispuesto tres zonas de colores rojo, verde y azul que harán
 </center>
 
 ## <FONT COLOR=#007575>Programación del panel de sensores I2C</font>
-El proyecto está como público en el siguiente enlace: [acceder](https://fgcoca.github.io/Sensores-actuadores-y-shield-tipo-Arduino/).
+El proyecto está como público en ArduinoBlocks en el siguiente enlace: [acceder](http://www.arduinoblocks.com/web/project/665750).
 
 También lo tenemos disponible para descargar e importar en este [enlace](firmware/panel-I2C.abp).
 
