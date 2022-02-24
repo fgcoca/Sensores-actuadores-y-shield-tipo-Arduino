@@ -13,12 +13,20 @@ edit_uri: ""
 copyright: Copyright &copy; 2022 - 2032 Federico Coca
 
 # 4. RRSS
-# extra:
-#  social:
-#    - type: 'github'
-#      link: 'https://github.com/fgcoca'
-#    - type: 'twitter'
-#      link: 'https://twitter.com/fgcoca'
+extra:
+  social:
+    - icon: fontawesome/brands/twitter-square 
+      link: https://twitter.com/fgcoca
+      name: Twitter de Federico Coca
+    - icon: fontawesome/brands/github
+      link: https://github.com/fgcoca
+      name: Github de Federico Coca
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/cocafederico/?hl=es
+      name: Instagram de Federico Coca
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/clubroboticagra
+      name: Twitter de Club Robótica Granada      
 
 # 5. Navegación
 nav:
