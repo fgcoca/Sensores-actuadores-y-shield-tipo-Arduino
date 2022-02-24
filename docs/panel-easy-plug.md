@@ -194,9 +194,9 @@ En la imagen siguiente tenemos todas las conexiones del proyecto.
 </center>
 
 ## <FONT COLOR=#AA0000>Programación del panel de sensores Easy Plug</font>
-El proyecto está como público en el siguiente enlace: [acceder](http://www.arduinoblocks.com/web/project/699533)
+El proyecto está como público en ArduinoBlocks en el siguiente enlace: [acceder](http://www.arduinoblocks.com/web/project/699533)
 
-También lo tenemos disponible para descargar e importar en este [enlace](firmware/Panel-STEAM-Easy%20Plug.abp).
+También lo tenemos disponible para descargar e importar a ArduinoBlocks en este [enlace](firmware/Panel-STEAM-Easy%20Plug.abp).
 
 El siguiente código corresponde al programa elaborado en ArduinoBlocks.
 
